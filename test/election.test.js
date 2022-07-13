@@ -4,8 +4,9 @@ const { utils, Contract } = require("ethers");
 
 const abi = [
   "function vote(address candidate)",
-  "function balanceOf(address _owner) public view returns (uint256 balance)",
 ];
+
+const electeesCount = 10;
 
 describe("Election", async () => {
   it("Should be possible to vote once", async () => {
@@ -37,7 +38,7 @@ describe("Election", async () => {
 
 const deployContract = async () => {
   const Contract = await ethers.getContractFactory("Election");
-  const contract = await Contract.deploy();
+  const contract = await Contract.deploy(electeesCount);
   await contract.deployed();
   return contract.address;
 };
