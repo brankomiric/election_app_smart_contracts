@@ -7,7 +7,7 @@ const abi = [
   "function balanceOf(address _owner) public view returns (uint256 balance)",
 ];
 
-describe("TestERC20Token", function () {
+describe("WakandaToken", function () {
   it("Should return correct total supply", async function () {
     const Contract = await ethers.getContractFactory("WakandaToken");
     const contract = await Contract.deploy();
