@@ -21,8 +21,11 @@ module.exports = {
       chainId: 1337,
     },
     rinkeby: {
-      url: "https://speedy-nodes-nyc.moralis.io/68be5cfb5f3e5bf20da7d6b0/eth/rinkeby",
+      url: "https://rinkeby.infura.io/v3/df1ede1192984523b5753b16dee363d2",
       accounts: [privateKey],
     },
   },
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_API_KEY
+  }
 };
